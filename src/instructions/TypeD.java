@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TypeD {
 
-	public void get_tc(String[] ins) {
+	public Integer[] get_tc(String[] ins) {
 		String op = ins[0];
 		Integer mem = Integer.parseInt(ins[1]);
 		//System.out.println("op: " + op + " mem: " + mem);
@@ -12,10 +12,16 @@ public class TypeD {
 		Scanner read = new Scanner(System.in);
 		System.out.println("Enter an integer value:");
 		Integer value = read.nextInt();
+		
+		Integer values[] = {13, mem, value};
+		
+		return values;
 	}
 	
-	public void noop(String[] ins) {
-		System.out.println("execução finalizada");
+	public Integer[] noop(String[] ins) {
+		Integer values[] = {0, 0};
+		
+		return values;
 	}
 	
 }
