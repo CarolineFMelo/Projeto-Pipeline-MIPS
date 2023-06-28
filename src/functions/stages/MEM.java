@@ -57,28 +57,28 @@ public class MEM {
 			break;
 		case 7:
 			//add
-			registers[alu[1]] = registers[alu[2]] + registers[alu[3]];
 			System.out.println("Salvando a soma de " + registers[alu[2]] + " + " + registers[alu[3]] + " no registrador $" + alu[1]);
+			registers[alu[1]] = registers[alu[2]] + registers[alu[3]];
 			System.out.println("Resultado da soma = " + registers[alu[1]]);
 			break;
 		case 8:
 			//mult
+			System.out.println("Salvando a multiplicação de " + registers[alu[1]] + " * " + registers[alu[2]] + " nos registradores $hi e $lo");
 			registers[32] = registers[alu[1]] * registers[alu[2]];
 			registers[33] = registers[alu[1]] * registers[alu[2]];
-			System.out.println("Salvando a multiplicação de " + registers[alu[1]] + " * " + registers[alu[2]] + " nos registradores $hi e $lo");
 			System.out.println("Resultado da multiplicação = " + registers[33]);
 			break;
 		case 9:
 			//sub
-			registers[alu[1]] = registers[alu[2]] - registers[alu[3]];
 			System.out.println("Salvando a subtração de " + registers[alu[2]] + " - " + registers[alu[3]] + " no registrador $" + alu[1]);
+			registers[alu[1]] = registers[alu[2]] - registers[alu[3]];
 			System.out.println("Resultado da subtração = " + registers[alu[1]]);
 			break;
 		case 10:
 			//div
+			System.out.println("Salvando mod de " + registers[alu[1]] + " % " + registers[alu[2]] + " no registrador $hi e salvando o resultado da divisão de " + registers[alu[1]] + " / " + registers[alu[2]] + " no registrador $lo");
 			registers[32] = registers[alu[1]] % registers[alu[2]];
 			registers[33] = registers[alu[1]] / registers[alu[2]];
-			System.out.println("Salvando mod de " + registers[alu[1]] + " % " + registers[alu[2]] + " no registrador $hi e salvando o resultado da divisão de " + registers[alu[1]] + " / " + registers[alu[2]] + " no registrador $lo");
 			System.out.println("Resultado do mod = " + registers[32]);
 			System.out.println("Resultado da divisão = " + registers[33]);
 			break;

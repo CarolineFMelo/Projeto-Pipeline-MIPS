@@ -9,7 +9,7 @@ public class Register {
 		Integer rd = Integer.parseInt(ins[1].substring(1, ins[1].length()-1));
 		Integer rs = Integer.parseInt(ins[2].substring(1, ins[2].length()-1));
 		Integer rt = Integer.parseInt(ins[3].substring(1, ins[3].length()));
-		System.out.println("op: " + op + " rd: " + rd + " rs: " + rs + " rt: " + rt);
+		//System.out.println("op: " + op + " rd: " + rd + " rs: " + rs + " rt: " + rt);
 		
 		String opBinary = "000000";
 		String rsBinary = Conversion.intToBinaryString(rs, 5);
