@@ -19,6 +19,9 @@ public class Execution {
 		ArrayList<String> data = FileManager.stringReader("./resources/data/archive.txt");
 		
 		while(PC.getPc() < data.size()) {
+			data.set(PC.getPc(),data.get(PC.getPc()).replace("$lo", "$33"));
+			data.set(PC.getPc(),data.get(PC.getPc()).replace("$hi", "$32"));
+			
 			String[] stage1 = exe1.readingInstruction(data.get(PC.getPc()));
 			Integer[] stage2 = exe2.decodeInstruction(stage1);
 			Integer[] stage3 = exe3.executeInstruction(stage2);

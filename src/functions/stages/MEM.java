@@ -4,16 +4,14 @@ import functions.generic.PC;
 
 public class MEM {
 	
-	// $hi: registers[33]; $lo: registers[34];
+	// $hi: registers[32]; $lo: registers[33];
 	
 	Integer registers[] = new Integer[34];
 	Integer memory[] = new Integer[1001];
 
 	public void memoryAccess(Integer alu[]) {
 		
-		if(registers[0] == null) {
-			registers[0] = 0;
-		}
+		registers[0] = 0;
 
 		switch(alu[0]) {
 		case 0:
